@@ -1,0 +1,5 @@
+.footer_social_icon svg {
+  --size: 3em;
+  width: var(--size);
+  height: var(--size);
+}
