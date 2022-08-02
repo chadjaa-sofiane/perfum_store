@@ -19,6 +19,7 @@ export const Button = ({
     <button
       {...rest}
       className={`
+        ${className}
         ${
           color === "light"
             ? "bg-neutral-400 text-primary-400"
@@ -29,7 +30,6 @@ export const Button = ({
         ${size === "medium" ? "text-2xl sm:text-xl" : ""}
         ${size === "large" ? "text-4xl sm:text-3xl" : ""}
         
-        ${className}
         w-fit py-2 px-4 shadow-sm shadow-primary-100 uppercase font-bold hover:opacity-75
         `}
     >
