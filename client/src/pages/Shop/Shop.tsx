@@ -5,12 +5,16 @@ import { ShopHero } from "./ShopHero";
 
 export const Shop = () => {
   return (
-    <Wrapper className="mt-16">
-      <Container>
+    <>
+      <Wrapper className="mt-16">
         <ShopHero />
-        <ShoppingCollection />
-        <Outlet />
-      </Container>
-    </Wrapper>
+      </Wrapper>
+      <Wrapper>
+        <Container>
+          <ShoppingCollection />
+          <Outlet />
+        </Container>
+      </Wrapper>
+    </>
   );
 };
