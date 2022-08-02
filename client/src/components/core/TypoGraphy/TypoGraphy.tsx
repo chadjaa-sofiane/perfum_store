@@ -32,3 +32,7 @@ export const SubTitle2 = ({ children, className = "" }: Props) => (
 export const Text = ({ children, className }: Props) => (
   <p className={`text-xl md:text-2xl ${className}`}> {children} </p>
 );
+
+export const SmallText = ({ children, className }: Props) => (
+  <p className={`text-base md:text-xl ${className}`}> {children} </p>
+);
