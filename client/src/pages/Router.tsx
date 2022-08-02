@@ -3,7 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { Cart } from "./Cart";
 import { Home } from "./Home";
 import { Shop, ProductDrawer } from "./Shop";
-import { HeaderTemplate } from "./HeaderTemplate";
+import { MainTemplate } from "./HeaderTemplate";
 import { BuyProductModal } from "./Shop/buyProductModal";
 
 const Router = () => {
@@ -11,10 +11,10 @@ const Router = () => {
   return (
     <AnimatePresence exitBeforeEnter>
       <Routes location={location} key={location.key}>
-        <Route element={<HeaderTemplate logoColor="light" />}>
+        <Route element={<MainTemplate lightLogo />}>
           <Route path="/" element={<Home />} />
         </Route>
-        <Route element={<HeaderTemplate />}>
+        <Route element={<MainTemplate />}>
           <Route path="/shop" element={<Shop />}>
             <Route path=":id" element={<ProductDrawer />} />
           </Route>
