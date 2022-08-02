@@ -23,10 +23,10 @@ export const ProductCard = ({ product }: ProductCardProps) => {
       className="flex flex-col sm:flex-row gap-4 cursor-pointer shadow-md"
       onClick={handleClick}
     >
-      <div className="w-full sm:w-1/2">
+      <div className="flex-1 flex sm:w-1/2 items-center">
         <img src={image} alt={name} className="w-full aspect-square" />
       </div>
-      <div className="p-4 flex flex-col gap-2">
+      <div className="flex-1 p-4 flex flex-col gap-2">
         <Title3> {name} </Title3>
         <Available available={available} />
         <Price amount={price} />
