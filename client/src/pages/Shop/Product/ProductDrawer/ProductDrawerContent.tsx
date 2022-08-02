@@ -5,6 +5,7 @@ import { Title3 } from "@/components/core";
 import { Available } from "../Available";
 import { Price } from "../Price";
 import { ButtonsField } from "../ButtonsField";
+import { Ingredients } from "../Ingredients";
 
 interface ProductDrawerContentProps {
   id: number;
@@ -38,6 +39,7 @@ export const ProductDrawerContent = ({ id }: ProductDrawerContentProps) => {
         <Available available={product.available} />
         <Price amount={product.price} />
         <p> {product.description} </p>
+        <Ingredients ingredients={product.ingredients || {}} />
         <ButtonsField id={id} />
       </div>
     </div>
