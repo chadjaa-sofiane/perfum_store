@@ -1,15 +1,11 @@
 import { Footer } from "@/components/Footer";
-import { Header, IHeaderProps } from "@/components/Header";
+import { Header, Logo } from "@/components/Header";
 import { Outlet } from "react-router-dom";
 
-interface IHederTemplateProps extends IHeaderProps {}
-
-export const HeaderTemplate = ({
-  logoColor = "dark",
-}: IHederTemplateProps) => {
+export const MainTemplate = ({ lightLogo }: { lightLogo?: boolean }) => {
   return (
     <>
-      <Header logoColor={logoColor} />
+      <Header logo={lightLogo && <Logo logoColor="light" />} />
       <Outlet />
       <Footer />
     </>

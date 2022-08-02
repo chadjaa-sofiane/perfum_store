@@ -3,15 +3,16 @@ import { Container, Wrapper } from "@/components/core";
 import { NavBar } from "./NavBar";
 
 export interface IHeaderProps {
-  logoColor?: "dark" | "light";
+  logo?: React.ReactNode;
 }
 
-export const Header = ({ logoColor = "dark" }: IHeaderProps) => {
+export const Header = ({ logo = <Logo /> }: IHeaderProps) => {
   return (
     <header className="absolute w-full z-10 top-0 left-0">
       <Wrapper className="bg-primary-400 md:bg-transparent">
         <Container className="flex px-2 py-4 md:px-2 md:py-4">
-          <Logo logoColor={logoColor} />
+          {/* <Logo logoColor={logoColor} /> */}
+          {logo}
           <NavBar />
         </Container>
       </Wrapper>
@@ -19,7 +20,7 @@ export const Header = ({ logoColor = "dark" }: IHeaderProps) => {
   );
 };
 
-const Logo = ({ logoColor }: IHeaderProps) => {
+export const Logo = ({ logoColor }: { logoColor?: "dark" | "light" }) => {
   return (
     <motion.div
       className="w-full px-4 md:px-0 flex justify-betwen"
